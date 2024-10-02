@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Agencia de marketing especializada en impulsar el éxito de tu negocio.">
+    <title>Marketing Agency</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="header-container">
+    <img src="images/logo.png" alt="Logo" class="logo">
+    <h1> V I S I O N A T </h1>
+</header>
+
+<nav>
+    <a href="#inicio">Inicio</a>
+    <a href="#nosotros">Nosotros</a>
+    <a href="#trabajos">Trabajos</a>
+    <a href="#precios">Precios</a>
+    <a href="#contacto">Contacto</a>
+</nav>
+
+<main>
+    <section id="inicio" class="container">
+        <h2>Bienvenidos a Nuestra Agencia</h2>
+        <p>Nos especializamos en estrategias de marketing innovadoras para hacer crecer tu negocio. Con años de experiencia y un equipo profesional, estamos listos para ayudarte.</p>
+        <div class="img-container">
+            <img src="images/78869c3149f4df0bbea3d049ae156ae0.jpg" alt="Imagen de marketing 1">
+            <img src="images/78869c3149f4df0bbea3d049ae156ae0.jpg" alt="Imagen de marketing 2">
+        </div>
+    </section>
+
+    <section id="nosotros" class="container">
+        <h2>Sobre Nosotros</h2>
+        <p>Somos un equipo creativo y apasionado por el marketing digital. Nuestro enfoque está en el crecimiento sostenido de nuestros clientes.</p>
+        <button id="moreInfoBtn">Saber Más</button>
+        <div id="moreInfo" style="display: none;">
+            <h3>Visión</h3>
+            <p>Busca diseñar las ideas de nuestros clientes y 
+                reflejarlas en una perspectiva agradable y moderna, 
+                utilizando una gama de servicios en el marketing, incluyendo 
+                la tecnología para brindarles una mejor atención.</p>
+            <h3>
+                Misión</h3>
+            <p> Brindarle al cliente un producto de calidad que posea estética, 
+                porte y esencia; de la mano de los programas más innovadores de la época, 
+                enalteciendo el marketing de las empresas que ponen en nuestras manos sus 
+                ideas y sus metas. </p>
+            <h3>Nuestros Valores</h3>
+            <ul>
+                <li>Innovación</li>
+                <li>Compromiso</li>
+                <li>Excelencia</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="trabajos" class="container">
+        <h2>Trabajos que hemos hecho</h2>
+        <div class="carousel">
+            <div class="carousel-images" id="carouselImages">
+                <img src="images/imagen2.png" alt="Trabajo 2">
+                <img src="images/imagen3.jpg" alt="Trabajo 3">
+                <img src="images/imagen4.PNG" alt="Trabajo 4">
+                <img src="images/imagen8.jpeg" alt="Trabajo 8">
+                <img src="images/imagen9.jpeg" alt="Trabajo 9">
+                <img src="images/imagen10.jpeg" alt="Trabajo 10">
+                <img src="images/imagen11.jpeg" alt="Trabajo 11">
+                <img src="images/imagen13.jpeg" alt="Trabajo 14">
+                <img src="images/imagen16.jpeg" alt="Trabajo 16">
+                <img src="images/imagen17.png" alt="Trabajo 17">
+                <img src="images/imagen19.jpeg" alt="Trabajo 19">
+                <img src="images/imagen20.jpg" alt="Trabajo 20">
+            </div>
+        </div>
+        <button id="prevBtn">Anterior</button>
+        <button id="nextBtn">Siguiente</button>
+    </section>
+
+    <section id="precios" class="container">
+        <h2>Nuestros Precios</h2>
+        <p>Ofrecemos precios competitivos y paquetes adaptados a las necesidades de cada cliente:</p>
+        <ul>
+            <li>Plan Básico: $300/mes</li>
+            <li>Plan Pro: $600/mes</li>
+            <li>Plan Premium: $1000/mes</li>
+        </ul>
+        <button id="morePricesBtn">Saber Más</button>
+        <div id="morePricesInfo" style="display: none;">
+            <h3>Detalles de los Paquetes</h3>
+            <ul>
+                <li><strong>Plan Básico:</strong> Incluye análisis básico y acceso a herramientas digitales.</li>
+                <li><strong>Plan Pro:</strong> Incluye todo en el plan básico más consultoría mensual y soporte 24/7.</li>
+                <li><strong>Plan Premium:</strong> Todo en el plan Pro más campañas publicitarias personalizadas y gestión completa de redes sociales.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="contacto" class="container">
+        <h2>Contacto</h2>
+        <p>Si estás interesado en nuestros servicios o tienes alguna pregunta, contáctanos:</p>
+        <ul>
+            <li>Teléfono: +123 456 7890</li>
+            <li>Email: info@marketingagency.com</li>
+            <li>Dirección: Calle Marketing, 123, Ciudad</li>
+        </ul>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2024 VisionAt. Todos los derechos reservados.</p>
+</footer>
+
+<!-- JavaScript para el carrusel y los botones "Saber Más" -->
+<script>
+    // Carrusel
+    const carouselImages = document.getElementById('carouselImages');
+    const images = carouselImages.getElementsByTagName('img');
+    let index = 0;
+
+    function updateCarousel() {
+        carouselImages.style.transform = `translateX(${-index * 100}%)`;
+    }
+
+    document.getElementById('nextBtn').addEventListener('click', () => {
+        index = (index + 1) % images.length;
+        updateCarousel();
+    });
+
+    document.getElementById('prevBtn').addEventListener('click', () => {
+        index = (index - 1 + images.length) % images.length;
+        updateCarousel();
+    });
+
+    // Mostrar/Ocultar información adicional en "Sobre Nosotros"
+    document.getElementById('moreInfoBtn').addEventListener('click', () => {
+        const moreInfo = document.getElementById('moreInfo');
+        if (moreInfo.style.display === 'none') {
+            moreInfo.style.display = 'block'; // Mostrar la sección
+        } else {
+            moreInfo.style.display = 'none'; // Ocultar la sección
+        }
+    });
+
+    // Mostrar/Ocultar información adicional en "Precios"
+    document.getElementById('morePricesBtn').addEventListener('click', () => {
+        const morePricesInfo = document.getElementById('morePricesInfo');
+        if (morePricesInfo.style.display === 'none') {
+            morePricesInfo.style.display = 'block'; // Mostrar la sección
+        } else {
+            morePricesInfo.style.display = 'none'; // Ocultar la sección
+        }
+    });
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+

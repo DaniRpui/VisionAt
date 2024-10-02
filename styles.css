@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #58d3e2, #176cba); /* Degradado horizontal */
+    color: #f4f4f4; /* Color claro para el texto */
+    line-height: 1.6;
+    padding: 12px;
+}
+
+.header-container {
+    background-color: rgba(255, 255, 255, 0); /* Color del contenedor de VisionAt */
+    color: #5e3979; /* Texto de color personalizado */
+    padding: 10px 0; /* Reducir el padding vertical */
+    display: flex; /* Cambiado a flex para un mejor control */
+    align-items: center; /* Alinear verticalmente */
+}
+
+.header-container .logo {
+    max-width: 100px; /* Ajusta el tamaño del logo */
+    margin-right: 20px; /* Espacio entre el logo y el título */
+    margin-left: 15px; /* Espacio a la izquierda del logo */
+}
+
+.header-container h1 {
+    font-size: 4rem; /* Aumentar el tamaño del título */
+    flex-grow: 1; /* Permitir que el título ocupe el espacio disponible */
+    text-align: center; /* Centrar el texto del título */
+    margin: 0; /* Eliminar el margen por defecto */
+    margin-left: -150px; /* Mover el título un poco más a la izquierda */
+}
+
+nav {
+    background-color: #182533; /* Fondo de navegación */
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+nav a {
+    display: inline-block;
+    padding: 15px;
+    color: #ffffff; /* Color del texto de los enlaces */
+    text-decoration: none;
+    transition: background-color 0.3s ease; /* Transición suave */
+}
+
+nav a:hover {
+    background-color: #444; /* Color al pasar el ratón */
+}
+
+main {
+    display: flex; /* Usar flexbox para el contenedor principal */
+    flex-direction: column; /* Organizar las secciones en columnas */
+    align-items: stretch; /* Alinear elementos al ancho del contenedor */
+}
+
+.container {
+    width: 100%; /* Ancho completo del contenedor */
+    max-width: 1600px; /* Ancho máximo para mantener consistencia */
+    padding: 40px;
+    margin: 20px auto; /* Espacio entre secciones */
+    background-color: #182533; /* Color de los contenedores */
+    border-radius: 8px;
+    text-align: center;
+    color: #fff; /* Texto blanco */
+}
+
+h2 {
+    color: #fff; /* Color del texto principal blanco */
+    margin-bottom: 20px;
+}
+
+p, ul {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.img-container {
+    display: flex; /* Usar flexbox para centrar las imágenes */
+    justify-content: center; /* Centrar horizontalmente */
+    padding: 20px; /* Espacio alrededor de las imágenes */
+}
+
+/* Estilos del carrusel */
+.carousel {
+    overflow: hidden; /* Ocultar imágenes fuera del contenedor */
+    position: relative; /* Necesario para posicionar botones */
+    display: flex; /* Hacer que el contenedor sea flexible */
+    justify-content: center; /* Centrar las imágenes horizontalmente */
+}
+
+.carousel-images {
+    display: flex; /* Mantener las imágenes en fila */
+    transition: transform 0.5s ease; /* Transición suave al cambiar de imagen */
+}
+
+.carousel-images img {
+    width: 100%; /* Ajustar la imagen al 100% del contenedor */
+    height: auto; /* Mantener la proporción */
+    object-fit: contain; /* Ajustar la imagen sin distorsionarla, manteniendo proporciones */
+    flex-shrink: 0; /* Evitar que las imágenes se reduzcan */
+}
+
+/* Estilos para los botones */
+button {
+    padding: 10px 20px;
+    background-color: #ff9900; /* Color de fondo del botón */
+    color: #fff; /* Color del texto del botón */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #e68a00; /* Color más oscuro al pasar el mouse */
+}
+
+#moreInfo, #morePricesInfo {
+    text-align: left;
+    margin-top: 20px;
+    background-color: #182533; /* Fondo del contenido desplegable */
+    padding: 20px;
+    border-radius: 8px;
+    color: #fff; /* Texto blanco */
+}
+
+footer {
+    text-align: center;
+    margin-top: 40px;
+    color: #fff;
+}
+
+
+
+  
+
+
+
+
+
+
+
+
+
